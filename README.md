@@ -56,6 +56,25 @@ As described in [1], we split the dataset into Discovery cohort and Validation C
 | NC | 144 | 65/79 | 70.29 (+- 5.97) | 0.15 (+- 0.40)|
 | VaD | 45 | 20/25 | 79.13 (+- 6.43) | 0.18 (+- 0.51)|
 
+
+#### Binary Datasets
+For both Discovery and Validation Cohort. The binary datasets were created for each disease label. 
+- AD vs NC
+- VaD vs NC
+- DLB vs NC
+
+##### z-score Calculation for Biomarker Selection
+
+We calculated z-scores for each of the 2,547 miRNAs in the discovery cohort using univariate logistic regression adjusted for clinical covariates (age, sex, and APOE-ε4 status). The z-score represents the strength of association between miRNA expression and AD diagnosis, with positive values indicating upregulation in AD patients and negative values indicating downregulation.  These z-scores serve as the foundation for the supervised principal component analysis, where miRNAs are filtered based on significance thresholds before dimensionality reduction.
+
+
+![alt text](images/z_scores_hist.png)
+
+
+
+
+
+
 ## REFERENCES
 
 [1] Shigemizu D, Akiyama S, Asanomi Y, Boroevich KA, Sharma A, Tsunoda T, Matsukuma K, Ichikawa M, Sudo H, Takizawa S, Sakurai T, Ozaki K, Ochiya T, Niida S. Risk prediction models for dementia constructed by supervised principal component analysis using miRNA expression data. Commun Biol. 2019 Feb 25;2:77. doi: 10.1038/s42003-019-0324-7. PMID: 30820472; PMCID: PMC6389908.
