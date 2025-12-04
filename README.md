@@ -63,16 +63,51 @@ For both Discovery and Validation Cohort. The binary datasets were created for e
 - VaD vs NC
 - DLB vs NC
 
-##### z-score Calculation for Biomarker Selection
+### Biomarker Selection ( based on z-score)
 
-We calculated z-scores for each of the 2,547 miRNAs in the discovery cohort using univariate logistic regression adjusted for clinical covariates (age, sex, and APOE-ε4 status). The z-score represents the strength of association between miRNA expression and AD diagnosis, with positive values indicating upregulation in AD patients and negative values indicating downregulation.  These z-scores serve as the foundation for the supervised principal component analysis, where miRNAs are filtered based on significance thresholds before dimensionality reduction.
+
+
+We calculated z-scores for each of the 2,547 miRNAs in the discovery cohort using univariate logistic regression adjusted for clinical covariates (age, sex, and APOE-ε4 status). The z-score represents the strength of association between miRNA expression and AD diagnosis, with positive values indicating upregulation in AD patients and negative values indicating downregulation.  These z-scores serve as the foundation for the supervised principal component analysis, where miRNAs are filtered based on significance thresholds before dimensionality reduction. 
 
 
 ![alt text](images/z_scores_hist.png)
 
+Overlap in top 10 miRNAs from z-score analysis
+
+![alt text](images/mrna_overlap_venn.png)
 
 
+###  Supervised PCA Modeling
 
+- Implemented two-step algorithm:
+
+    - Filter miRNAs by z-score threshold (T)
+    - Apply PCA dimensionality reduction (m components)
+
+- Grid search over T (0.1-5.0) and m (1-10) using 10-fold cross-validation
+
+- Selected optimal (T, m) combinations for each disease.
+
+
+![alt text](images/grid_search_heatmap_ad.png)
+![alt text](images/grid_search_heatmap_vad.png)
+![alt text](images/grid_search_heatmap_dlb.png)
+
+### Model Building & Validation
+
+Then, we trained final logistic regression models on discovery cohort for each disease and then tested on independent validation cohort.
+
+![alt text](images/roc_curves.png)
+
+
+##### Accuracy estimation in three diseases using the validation cohort
+
+| Disease | PI Cutoff | Accuracy | Sensitivity | Specificity |
+|---------|-----------|----------|-------------|-------------|
+| **AD**  | 0.640     | 0.708    | 0.661       | 0.875       |
+| **VaD** | 0.160     | 0.751    | 0.644       | 0.785       |
+| **DLB** | 0.165     | 0.759    | 0.476       | 0.924       |
+ 
 
 
 ## REFERENCES
