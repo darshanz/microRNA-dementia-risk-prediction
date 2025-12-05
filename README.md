@@ -113,3 +113,11 @@ Then, we trained final logistic regression models on discovery cohort for each d
 ## REFERENCES
 
 [1] Shigemizu D, Akiyama S, Asanomi Y, Boroevich KA, Sharma A, Tsunoda T, Matsukuma K, Ichikawa M, Sudo H, Takizawa S, Sakurai T, Ozaki K, Ochiya T, Niida S. Risk prediction models for dementia constructed by supervised principal component analysis using miRNA expression data. Commun Biol. 2019 Feb 25;2:77. doi: 10.1038/s42003-019-0324-7. PMID: 30820472; PMCID: PMC6389908.
+
+ [2] Li, Z., Guo, W., Ding, S., Chen, L., Feng, K., Huang, T. and Cai, Y.D., 2022. Identifying key MicroRNA signatures for neurodegenerative diseases with machine learning methods. Frontiers in Genetics, 13, p.880997.
+
+ [3] Kursa M., Rudnicki W., "Feature Selection with the Boruta Package" Journal of Statistical Software, Vol. 36, Issue 11, Sep 2010 
+
+ [4] [Risk prediction models for dementia constructed by supervised principal component analysis using miRNA expression data](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE120584)
+
+ [5] [A Guide to NCBI: Gene Expression](https://www.ncbi.nlm.nih.gov/home/tutorials/)
