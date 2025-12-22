@@ -1,12 +1,18 @@
-# Dementia Risk Prediction using miRNA Data
-
+# Dementia Risk Prediction (miRNA data) API
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-orange)
- 
- 
 
-A Python implementation of the supervised principal component analysis (PCA) methodology for dementia risk prediction from serum miRNA expression data.
+Machine learning system for predicting dementia risk using serum miRNA biomarkers. A Python implementation of the supervised principal component analysis (PCA) methodology for dementia risk prediction from serum miRNA expression data.
+
+## Features
+
+- **End-to-end ML Pipeline**: From raw data to production predictions
+- **Scalable Architecture**: Modular design with clear separation of concerns
+- **Production APIs**: REST API for real-time predictions
+- **Containerized**: Docker support for easy deployment
+- **Notebooks**: Detailed analysis on jupyter notebooks
+  
 
 *Note: This is an independent reimplementation of the methods described in the referenced paper, created for educational purposes. All original research credit belongs to  [Shigemizu et al.](https://pubmed.ncbi.nlm.nih.gov/30820472/) [1]*
   
