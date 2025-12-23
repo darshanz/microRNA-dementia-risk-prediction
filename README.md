@@ -7,11 +7,24 @@ Machine learning system for predicting dementia risk using serum miRNA biomarker
 
 ## Features
 
-- **End-to-end ML Pipeline**: From raw data to production predictions
-- **Scalable Architecture**: Modular design with clear separation of concerns
-- **Production APIs**: REST API for real-time predictions
-- **Containerized**: Docker support for easy deployment
+- **End-to-end ML Pipeline**: From raw data to production predictions 
 - **Notebooks**: Detailed analysis on jupyter notebooks
+
+
+
+
+##### Contents
+- To run, install from `mirna_risk_pred` directory using 
+ 
+    ```bash 
+    cd mirna_risk_pred
+    pip install -e .
+    ```
+
+Then , run `scripts/main.py`
+- `notebook` directory contains jupyter noteboos with detailed analysis and visualization
+
+
   
 
 *Note: This is an independent reimplementation of the methods described in the referenced paper, created for educational purposes. All original research credit belongs to  [Shigemizu et al.](https://pubmed.ncbi.nlm.nih.gov/30820472/) [1]*
