@@ -8,3 +8,4 @@
 .vscode/
 .idea/
 **/.ipynb_checkpoints/
+**/config.ini

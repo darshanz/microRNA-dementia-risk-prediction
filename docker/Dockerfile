@@ -19,4 +19,4 @@ RUN pip install -e .
 RUN useradd -m -u 1000 appuser
 USER appuser
 
-CMD ["python", "scripts/train_pipeline.py", "--config", "configs/model_config.yaml"]
+CMD ["python", "scripts/run_pipeline.py"]

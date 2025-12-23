@@ -6,9 +6,9 @@ warnings.filterwarnings('ignore')
 from sklearn.linear_model import LogisticRegression 
 
 
-def calculate_z_values(X_mirna, covariates, y):
-    z_values = {}
-    
+def calculate_z_values(X_mirna, covariates, y): 
+    mirnas = []
+    z_values = []
     for mirna in tqdm(X_mirna.columns):
         X = pd.concat([X_mirna[[mirna]], covariates.set_index('sample_id')], axis=1)  
         model = LogisticRegression(penalty=None, max_iter=1000)
@@ -21,7 +21,10 @@ def calculate_z_values(X_mirna, covariates, y):
         coef = result.params[1]
         se = result.bse[1]
         z = coef / se
-        
-        z_values[mirna] = z
-    
-    return pd.Series(z_values)
+
+        mirnas.append(mirna)
+        z_values.append(z) 
+    z_df = pd.DataFrame()
+    z_df['miRNA'] = mirnas
+    z_df['z'] = z_values 
+    return z_df

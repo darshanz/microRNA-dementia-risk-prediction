@@ -1,0 +1,31 @@
+Metadata-Version: 2.4
+Name: mirna-risk-pred
+Version: 0.1.0a1
+Summary: MicroRNA based dementia risk prediction.
+Author-email: Sudarshan Pant <sudarshan.pant@gmail.com>
+License: MIT License
+Classifier: Development Status :: 4 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tqdm
+Requires-Dist: diskcache
+Requires-Dist: plotly
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Dynamic: license-file
+
+# MicroRNA - Dementia Risk Prediction

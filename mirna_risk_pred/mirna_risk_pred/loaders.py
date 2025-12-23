@@ -15,4 +15,5 @@ class DataLoader:
         y = meta_data[['sample_id','label']].set_index('sample_id')
         X_mirna = series_mtrx.set_index("ID_REF").T
         covariates = meta_data[['sample_id','age', 'sex', 'apoe4']]
+
         return X_mirna, covariates, y
